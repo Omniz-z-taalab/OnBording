@@ -4,7 +4,8 @@ class Description extends StatelessWidget {
   final String descrip;
   final FontWeight fontwidth;
   final double fontSize;
-  const Description({Key? key,required this.descrip,required this.fontwidth,required this.fontSize}) : super(key: key);
+  final Color textColor;
+  const Description({Key? key,required this.descrip,required this.fontwidth,required this.fontSize,required this.textColor}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +15,7 @@ class Description extends StatelessWidget {
           child: Text(
             descrip,
             textAlign: TextAlign.center,
-            style: TextStyle(color: Colors.black, fontSize: fontSize,fontWeight: fontwidth),
+            style: TextStyle(color: textColor, fontSize: fontSize,fontWeight: fontwidth),
 
 
         ),

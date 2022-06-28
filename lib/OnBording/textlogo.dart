@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 
 class Logo extends StatelessWidget {
   final String text;
-  const Logo({Key? key,required this.text }) : super(key: key);
+  final Color textColor;
+  const Logo({Key? key,required this.text ,required this.textColor}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -10,7 +11,7 @@ class Logo extends StatelessWidget {
       child: Text(
         text,
         style: TextStyle(
-            fontFamily: 'Ubuntu', color: Colors.teal, fontSize: 30),
+            fontFamily: 'Ubuntu', color: textColor, fontSize: 30),
 
       ),
     );

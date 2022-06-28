@@ -17,12 +17,12 @@ class page1 extends StatelessWidget {
             child: Image.asset('images/delivery.png'),),
 
         ),
-        Description(descrip: 'Get food delivery to your doorstep asap', fontSize: 25,fontwidth: FontWeight.bold,),
+        Description(descrip: 'Get food delivery to your doorstep asap', fontSize: 25,fontwidth: FontWeight.bold, textColor: Colors.black),
        SizedBox(height: 10,),
        Padding(
          padding: const EdgeInsets.only(right: 18.0,left: 18),
          child: Description(descrip: 'We have young and professional delivery team that will bring '
-                'your food as soon as possible to your doorstep', fontwidth: FontWeight.normal, fontSize: 10),
+                'your food as soon as possible to your doorstep', fontwidth: FontWeight.normal, fontSize: 13, textColor: Colors.grey,),
        ),
 
 
