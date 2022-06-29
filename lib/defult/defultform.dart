@@ -16,7 +16,7 @@ class _DefaultFormFieldState extends State<DefaultFormField> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(right: 25.0, left: 25),
+      padding: const EdgeInsets.only(right: 20.0, left: 20),
       child:
 
       TextFormField(

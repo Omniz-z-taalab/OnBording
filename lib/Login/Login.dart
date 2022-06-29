@@ -47,11 +47,9 @@ class _LoginScreenState extends State<LoginScreen> {
                     fontwidth: FontWeight.w500,
                     fontSize: 15,
                     textColor: Colors.black),
-                onTap: (){
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => Register()));
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => Register()));
                 },
               ),
               SizedBox(
@@ -64,8 +62,14 @@ class _LoginScreenState extends State<LoginScreen> {
                       fontwidth: FontWeight.w400,
                       fontSize: 20,
                       textColor: Colors.lightBlue)),
-              SizedBox(width: 7,),
-              Icon(Icons.help,size: 25,color: Colors.lightBlue,),
+              SizedBox(
+                width: 7,
+              ),
+              Icon(
+                Icons.help,
+                size: 25,
+                color: Colors.lightBlue,
+              ),
             ],
           ),
           SizedBox(
@@ -88,10 +92,10 @@ class _LoginScreenState extends State<LoginScreen> {
             colorButton: Colors.blueAccent,
             border: BorderRadius.circular(5),
             text: 'Sign In',
-            ontap: (){ Navigator.push(
-                context,
-                MaterialPageRoute(
-                    builder: (context) => Register()));},
+            ontap: () {
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => Register()));
+            },
           ),
           SizedBox(
             height: 15,
@@ -136,12 +140,18 @@ class _LoginScreenState extends State<LoginScreen> {
                 SizedBox(
                   width: 5,
                 ),
-                Text(
-                  'Register here',
-                  style: TextStyle(
-                      fontWeight: FontWeight.w500,
-                      color: Colors.lightBlue,
-                      fontSize: 15),
+                InkWell(
+                  child: Text(
+                    'Register here',
+                    style: TextStyle(
+                        fontWeight: FontWeight.w500,
+                        color: Colors.lightBlue,
+                        fontSize: 15),
+                  ),
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => Register()));
+                  },
                 )
               ]),
           SizedBox(
