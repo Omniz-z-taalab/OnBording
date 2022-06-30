@@ -8,7 +8,7 @@ class UnderLine extends StatelessWidget {
     return  Padding(
       padding: const EdgeInsets.only(left: 10, top: 10,right: 10),
       child: SizedBox(
-        width: 155.0,
+        width: 140.0,
         height: 1.0,
         child: Container(
           decoration: BoxDecoration(

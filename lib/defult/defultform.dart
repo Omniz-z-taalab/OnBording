@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 class DefaultFormField extends StatefulWidget {
 
-  const DefaultFormField({Key? key}) : super(key: key);
+  const DefaultFormField({Key? key,}) : super(key: key);
 
   @override
   _DefaultFormFieldState createState() => _DefaultFormFieldState();
@@ -32,6 +32,7 @@ class _DefaultFormFieldState extends State<DefaultFormField> {
             borderSide: BorderSide(
               color: Colors.grey,
             ),
+
           ),
           focusedBorder: OutlineInputBorder(
             borderSide: BorderSide(color: Colors.grey.shade500),
@@ -63,6 +64,11 @@ class _DefaultFormFieldState extends State<DefaultFormField> {
             ]),
           ),
         ),
+              validator: (Value) {
+    if (Value == null || Value.isEmpty) {
+    return 'Phone number is not register';
+    }
+        },
       ),
     );
   }

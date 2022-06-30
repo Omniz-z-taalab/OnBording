@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:passwordfield/passwordfield.dart';
 
 class PasswordFormField extends StatefulWidget {
   const PasswordFormField({Key? key}) : super(key: key);
@@ -14,26 +15,27 @@ class _PasswordFormFieldState extends State<PasswordFormField> {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(right: 20.0, left: 20),
-      child: TextFormField(
-        obscureText: true,
-        controller: password,
-        maxLines: 1,
-        keyboardType: TextInputType.visiblePassword,
-        decoration: InputDecoration(
-          hintText: "Password",
-          hintStyle: TextStyle(color: Colors.grey),
-          contentPadding: EdgeInsets.symmetric(vertical: 18, horizontal: 10),
-          fillColor: Colors.white,
-          border: OutlineInputBorder(
+      child:  PasswordField(
+        color: Colors.grey.shade700,
+        passwordConstraint: r'.*[@$#.*].*',
+        inputDecoration: PasswordDecoration(),
+        hintText: 'must have special characters',
+        border: PasswordBorder(
+
+          focusedBorder: OutlineInputBorder(
             borderSide: BorderSide(
-              color: Colors.grey,
+              color: Colors.grey.shade300,
             ),
           ),
-          focusedBorder: OutlineInputBorder(
-            borderSide: BorderSide(color: Colors.grey.shade500),
+          focusedErrorBorder: OutlineInputBorder(
+            borderSide:
+            BorderSide(width: 1, color: Colors.red),
           ),
         ),
+        errorMessage:
+        'must contain special character either . * @ # \$',
       ),
+
     );
   }
 }

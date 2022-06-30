@@ -49,7 +49,7 @@ class _OnBoardingState extends State<OnBoarding> {
           Container(
             child: Logo(
               text: '7',
-              textColor: Colors.amber.shade300,
+              textColor: Colors.amber.shade300, fontSize: 30,
             ),
           ),
           SizedBox(
@@ -59,6 +59,7 @@ class _OnBoardingState extends State<OnBoarding> {
             child: Logo(
               text: 'Krave',
               textColor: Colors.teal,
+              fontSize: 30,
             ),
           ),
         ],

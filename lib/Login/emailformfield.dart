@@ -14,7 +14,7 @@ class _EmailFormFieldState extends State<EmailFormField> {
   Widget build(BuildContext context) {
     return
       Padding(
-        padding: const EdgeInsets.only(right: 25.0, left: 25),
+        padding: const EdgeInsets.only(right: 20.0, left: 20),
     child:
       TextFormField(
       controller: email,
@@ -34,6 +34,12 @@ class _EmailFormFieldState extends State<EmailFormField> {
           borderSide: BorderSide(color: Colors.grey.shade500),
         ),
       ),
+        validator: (Value
+            ){
+        if(Value == null || Value.isEmpty){
+          return 'email is required';
+        }
+        },
       ),);
   }
 }
